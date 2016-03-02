@@ -1,4 +1,4 @@
-package com.companyname.springapp.web;
+package com.companyname.springapp.controller;
 
 import java.io.IOException;
 import java.util.Date;
@@ -17,8 +17,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.companyname.springapp.domain.Alumno;
-import com.companyname.springapp.repository.AlumnoDao;;
+import com.companyname.springapp.dao.AlumnoDao;
+import com.companyname.springapp.model.Alumno;
 
 @Controller
 public class AlumnoController {

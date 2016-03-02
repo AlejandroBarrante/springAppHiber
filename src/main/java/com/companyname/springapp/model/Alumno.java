@@ -1,39 +1,50 @@
-package com.companyname.springapp.domain;
+package com.companyname.springapp.model;
 
-import java.io.Serializable;
 import java.util.Date;
 
-public class Alumno implements Serializable {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "ALUMNO")
+public class Alumno {
+
+	@Id
+	@Column(name = "ID")
+	@GeneratedValue
 	private Integer idAlumno;
+
+	@Column(name = "NOMBRE")
 	private String nombre;
+
+	@Column(name = "APELLIDOS")
 	private String apellidos;
+
+	@Column(name = "FECHAALTA")
 	private Date fechaAlta;
+
+	@Column(name = "IDPROFESOR")
 	private Integer idProfesor;
+
+	@Column(name = "ASIGNATURA")
 	private String asignatura;
+
+	@Column(name = "NOMBREPROF")
 	private String nombreProf;
+
+	@Column(name = "APELLIDOPROF")
 	private String apellidoProf;
+
+	@Column(name = "NOMBRECOMPLETOPROF")
 	private String nombreCompletoProf;
+
+	@Column(name = "NOMBRECOMPLETOALUMNO")
 	private String nombreCompletoAlumno;
 
-	public Alumno() {
-	}
-
-	public Alumno(Integer idAlumno, String nombre, String apellidos, Date fechaAlta, Integer idProfesor,
-			String asignatura, String nombreProf, String apellidoProf, String nombreCompletoProf,
-			String nombreCompletoAlumno) {
-		this.idProfesor = idAlumno;
-		this.nombre = nombre;
-		this.apellidos = apellidos;
-		this.fechaAlta = fechaAlta;
-		this.idProfesor = idProfesor;
-		this.asignatura = asignatura;
-		this.nombreProf = nombreProf;
-		this.apellidoProf = apellidoProf;
-		this.nombreCompletoProf = nombreCompletoProf;
-		this.nombreCompletoAlumno = nombreCompletoAlumno;
-
-	}
+	// -----------------
 
 	public Integer getIdAlumno() {
 		return idAlumno;
